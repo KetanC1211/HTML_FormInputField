@@ -27,6 +27,12 @@
             <input type="text" id="phoneNumber" name="phoneNumber">
             <error-output class="phoneNumber-error" for="phoneNumber"></error-output>
         </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="text" id="password" name="password">
+            <error-output class="password-error" for="password"></error-output>
+        </div>
+        
         <button>Submit</button>
     </form>
     <script>
@@ -47,12 +53,20 @@
             else emailError.textContent = "Email is Incorrect";
         });
         const phoneNumber = document.querySelector('#phoneNumber');
-        const phonePattern = document.querySelector('.phoneNumber-error');
+        const phoneError = document.querySelector('.phoneNumber-error');
         phoneNumber.addEventListener('input',function(){
-            let nameRegex = RegExp("[+91][\\s][0-9]{10}");
-            if(nameRegex.test(phoneNumber.value))
-            phonePattern.textContent = " ";
-            else phonePattern.textContent = "Phone Number is Incorrect";
+            let phoneRegex = RegExp("[+91][\\s][0-9]{10}");
+            if(phoneRegex.test(phoneNumber.value))
+            phoneError.textContent = " ";
+            else phoneError.textContent = "Phone Number is Incorrect";
+        });
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input',function(){
+            let passwordRegex= RegExp("[0-9a-zA-Z]{8,}");
+            if(passwordRegex.test(password.value))
+            passwordError.textContent = " ";
+            else passwordError.textContent = "Password Number is Incorrect";
         });
     </script>
 </body>
