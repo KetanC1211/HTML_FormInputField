@@ -22,6 +22,11 @@
             <input type="email" id="email" name="email">
             <error-output class="Email-error" for="email"></error-output>
         </div>
+        <div>
+            <label for="phoneNumber">Email: </label>
+            <input type="number" id="number" name="phoneNumber">
+            <error-output class="phoneNumber-error" for="phoneNumber"></error-output>
+        </div>
         <button>Submit</button>
     </form>
     <script>
@@ -40,6 +45,14 @@
             if(nameRegex.test(email.value))
                 emailError.textContent = " ";
             else emailError.textContent = "Email is Incorrect";
+        });
+        const phoneNumber = document.querySelector('#phoneNumber');
+        const phonePattern = document.querySelector('.phoneNumber-error');
+        phoneNumber.addEventListener('input',function(){
+            let nameRegex = RegExp("[abc]{3}.[a-z]{3}@bl.co.[a-z]{2}");
+            if(nameRegex.test(phoneNumber.value))
+            phonePattern.textContent = " ";
+            else phonePattern.textContent = "Email is Incorrect";
         });
     </script>
 </body>
