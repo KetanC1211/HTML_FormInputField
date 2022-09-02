@@ -16,7 +16,7 @@ body {
     margin-bottom: 20px;
 }
 form {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 div {
     margin-bottom: 20px;
@@ -26,7 +26,7 @@ div {
     align-items:center;
 }
 label,input,button {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 label {
@@ -35,10 +35,10 @@ label {
     margin-right:2%;
 }
 input {
-    flex: auto;
+    flex:auto;
 }
 button {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 .error-output {
